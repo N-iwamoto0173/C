@@ -23,3 +23,11 @@
 * 追加課題:Windows/Linuxの移植性のあるコードへのリファクタリング
 * 検索、ソート機能の追加
 * カーソル移動とInsert対応
+
+___
+###### 2026/4/20追記
+これまでWindowsで使用するコンパイラはbcc32を想定していたため、gcc対応できるようコードを修正。
+
+使用文字コードがSJISのため、コンパイル時は次のコマンドを使用してください。
+
+`gcc -finput-charset=cp932 -fexec-charset=cp932 -o main.exe mission5_26.cpp`
